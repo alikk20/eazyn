@@ -247,7 +247,6 @@ $run_sql = mysqli_query($is_connect, $query);//menjalankan query
                           <h2 class="fw-semibold mb-3">
                              <?php echo $fetch_data1[0]['value'] - $fetch_data2[0]['jumlah_izin'] ?>
                           </h2>
-                        
                       </div>
                       <div class="col-8">
                         <div class="d-flex justify-content-center">
