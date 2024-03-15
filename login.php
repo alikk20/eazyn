@@ -1,3 +1,10 @@
+<?php 
+session_start(); // ketika mulai session harus ada sintak ini dulu 
+if (!isset($_SESSION['login'])) { 
+  header('location: login.php'); 
+  exit; 
+} 
+?> 
 <!doctype html>
 <html lang="en">
 

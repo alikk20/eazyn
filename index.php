@@ -5,7 +5,13 @@ $query = "select izin.*, guru.nama as nama_guru, bk.nama as nama_bk from izin jo
 $run_sql = mysqli_query($is_connect, $query);//menjalankan query
 //var_dump($sql); //cek isi variabel
 ?>
-
+<?php 
+session_start(); // ketika mulai session harus ada sintak ini dulu 
+if (!isset($_SESSION['login'])) { 
+  header('location: login.php'); 
+  exit; 
+} 
+?> 
 
 <!doctype html>
 <html lang="en">
@@ -132,7 +138,7 @@ $run_sql = mysqli_query($is_connect, $query);//menjalankan query
                       <i class="ti ti-list-check fs-6"></i>
                       <p class="mb-0 fs-3">My Task</p>
                     </a>
-                    <a href="login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <a href="logout.php" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>
                 </div>
               </li>
