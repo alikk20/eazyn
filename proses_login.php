@@ -13,5 +13,5 @@ if (mysqli_num_rows($result)> 0){
   $_SESSION['username'] = $username;
   header("Location: index.php");
 } else {
-  echo 'gagal';
+  header("Location: login.php");
 }
